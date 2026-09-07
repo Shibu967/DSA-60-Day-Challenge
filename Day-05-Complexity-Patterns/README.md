@@ -1,32 +1,38 @@
 # Day 05 — Complexity Pattern Recognition
 
-> **Phase 1 | Day 5 of 60**
-> **Topic:** Code देखकर जल्दी Time & Space Complexity identify करना
-> **Status:** ✅ Theory Complete | ✅ Problems 1–4 | ✅ P5 Brute | ✅ P5 Optimized | ✅ P6 | ✅ P7
+> **Date:** 2026-09-07
+> **Phase:** Phase 1 — Foundations
+> **Difficulty Level:** Beginner
 
 ---
 
-## 🎯 Day 5 Goal
+## 1. 🎯 Learning Objective
 
-Code देखकर तुरंत identify करना:
-
-- O(n) — Single Loop
-- O(n²) — Nested Loop
-- O(log n) — Halving Pattern
-- O(n log n) — Sorting
-- O(1) Auxiliary Space — In-place
-- O(n) Space — Extra array/map
-- `in_array()` का hidden O(n) impact
-- HashMap से O(n²) → O(n) optimization
-- Nested loop **vs** Separate loops (common confusion)
+- [x] Identify O(n) patterns by looking at loop structure
+- [x] Identify O(n²) patterns — nested loops vs separate loops
+- [x] Identify O(log n) patterns — halving each step
+- [x] Identify O(n log n) — sorting-based complexity
+- [x] Understand in-place modification and O(1) auxiliary space
+- [x] Understand why `in_array()` inside a loop is a hidden O(n²) trap
+- [x] Use HashMap to optimize O(n²) brute force to O(n)
 
 ---
 
-## ✅ PART 1 — Theory & Concepts
+## 2. 📚 Theory
+
+### What is Complexity Pattern Recognition?
+
+Reading code and immediately identifying its time and space complexity without running it. This is a core interview skill. The goal is to look at the **loop structure** — not individual lines — to determine how the algorithm scales.
+
+### Why does it matter?
+
+Two solutions can produce the same correct output. But one might be O(n) and the other O(n²). For large inputs, that difference means the difference between a solution that works in production and one that times out.
 
 ---
 
-### 1. Single Loop → O(n)
+## 3. 🧩 Core Concepts
+
+### Concept 1 — Single Loop → O(n)
 
 ```php
 for ($i = 0; $i < $n; $i++) {
@@ -34,25 +40,20 @@ for ($i = 0; $i < $n; $i++) {
 }
 ```
 
+The loop runs `n` times. One operation per step. Time grows linearly with input.
+
 | | Complexity |
 |---|---|
-| **Time** | O(n) |
-| **Space** | O(1) |
-
-> Loop n बार चलता है → n operations → **O(n)**
+| Time | O(n) |
+| Space | O(1) |
 
 ---
 
-### 2. Two Separate Loops → O(n), NOT O(n²) ⚠️
+### Concept 2 — Two Separate Loops → O(n), NOT O(n²)
 
 ```php
-for ($i = 0; $i < $n; $i++) {
-    echo $i;
-}
-
-for ($j = 0; $j < $n; $j++) {
-    echo $j;
-}
+for ($i = 0; $i < $n; $i++) { echo $i; }
+for ($j = 0; $j < $n; $j++) { echo $j; }
 ```
 
 ```
@@ -61,15 +62,14 @@ O(n) + O(n) = O(2n) = O(n)
 
 | | Complexity |
 |---|---|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| Time | O(n) |
+| Space | O(1) |
 
-> **Important Learning:** Loop की संख्या नहीं, nested relationship complexity decide करती है।
-> दो separate loops = O(n), nested loops = O(n²)
+> **Important:** The number of loops does not decide complexity. The **nested relationship** between loops decides it. Two separate loops add their complexities — they do NOT multiply.
 
 ---
 
-### 3. Nested Loop → O(n²)
+### Concept 3 — Nested Loop → O(n²)
 
 ```php
 for ($i = 0; $i < $n; $i++) {
@@ -79,20 +79,19 @@ for ($i = 0; $i < $n; $i++) {
 }
 ```
 
+Outer loop runs `n` times. For each of those, inner loop runs `n` times. Total = n × n = n².
+
 | | Complexity |
 |---|---|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-> बाहरी loop n बार → अंदर का loop हर बार n बार → **n × n = n²**
+| Time | O(n²) |
+| Space | O(1) |
 
 ---
 
-### 4. Halving Pattern → O(log n)
+### Concept 4 — Halving Pattern → O(log n)
 
 ```php
 $i = $n;
-
 while ($i > 1) {
     $i = intdiv($i, 2);
 }
@@ -102,26 +101,26 @@ while ($i > 1) {
 n → n/2 → n/4 → n/8 → ... → 1
 ```
 
+The input is cut in half each step. It takes log₂(n) steps to reach 1.
+
 | | Complexity |
 |---|---|
-| **Time** | O(log n) |
-| **Space** | O(1) |
+| Time | O(log n) |
+| Space | O(1) |
 
-> हर iteration में input आधा होता है → log₂(n) steps → **O(log n)**
+> **Simple rule:** If the variable is halved (or divided by any constant) each step → O(log n).
 
 ---
 
-### 5. Function Called n Times (Inner Loop) → O(n²)
+### Concept 5 — Function Called n Times with Inner Loop → O(n²)
 
 ```php
 function processArray($arr) {
-    foreach ($arr as $value) {   // O(n)
-        echo $value;
-    }
+    foreach ($arr as $value) { echo $value; }  // O(n)
 }
 
 for ($i = 0; $i < $n; $i++) {
-    processArray($arr);          // n बार call
+    processArray($arr);   // called n times
 }
 ```
 
@@ -133,34 +132,37 @@ Total = n × n = n²
 
 | | Complexity |
 |---|---|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| Time | O(n²) |
+| Space | O(1) |
+
+> A function call hides the inner loop. Always look inside the function to count total work.
 
 ---
 
-### 6. In-place Modification → Auxiliary Space O(1)
+### Concept 6 — In-place Modification → O(1) Auxiliary Space
 
 ```php
-// Running Sum — in-place
 for ($i = 1; $i < count($nums); $i++) {
-    $nums[$i] += $nums[$i - 1];
+    $nums[$i] += $nums[$i - 1];   // modify the input directly
 }
 ```
 
+No new array is created. We modify the existing array directly. The only extra memory used is the loop variable `$i`.
+
 | | Complexity |
 |---|---|
-| **Time** | O(n) |
-| **Auxiliary Space** | O(1) ← नया array नहीं बनाया |
+| Time | O(n) |
+| Auxiliary Space | O(1) |
 
-> **Auxiliary Space** = Extra memory जो algorithm खुद use करे (input को count नहीं करते)
+> **Auxiliary space** = extra memory the algorithm uses, NOT counting the input itself.
 
 ---
 
-### 7. `in_array()` Trap → Hidden O(n) ⚠️
+### Concept 7 — `in_array()` Trap → Hidden O(n²)
 
 ```php
-foreach ($nums1 as $num) {           // O(n)
-    if (!in_array($num, $nums2)) {   // O(n) per call ← TRAP!
+foreach ($nums1 as $num) {              // O(n)
+    if (!in_array($num, $nums2)) {      // O(n) per call — hidden!
         $result[] = $num;
     }
 }
@@ -170,24 +172,28 @@ foreach ($nums1 as $num) {           // O(n)
 O(n) × O(n) = O(n²)
 ```
 
-> `in_array()` पूरा array linearly scan करता है → worst case O(n)
-> इसे loop के अंदर use करना = **hidden O(n²)**
+`in_array()` scans the entire array linearly each time it is called. Placing it inside a loop multiplies the complexity.
+
+| | Complexity |
+|---|---|
+| Time | O(n²) — the in_array() trap |
+| Space | O(n) |
 
 ---
 
-### 8. HashMap / Associative Array Optimization
+### Concept 8 — HashMap Optimization → O(n²) to O(n)
+
+Instead of calling `in_array()` in a loop, build a HashMap first.
 
 ```php
-// पहले set बनाओ — O(n)
+// Build the map — O(n)
 $set = [];
 foreach ($nums2 as $num) {
     $set[$num] = true;
 }
 
-// अब lookup — Average O(1)
-if (isset($set[$num])) {
-    // found!
-}
+// Lookup — average O(1) per check
+if (isset($set[$num])) { ... }
 ```
 
 ```
@@ -196,191 +202,206 @@ Lookup: O(1) average
 Total: O(n + n) = O(n)
 ```
 
-> **Result:** `O(n²)` → `O(n)` 🎯
-> **Interview Note:** HashMap lookup को average **O(1)** माना जाता है।
+| | Complexity |
+|---|---|
+| Time | O(n) |
+| Space | O(n) — the HashMap |
+
+> **Interview note:** HashMap lookup is always treated as average O(1). This is the standard assumption.
 
 ---
 
-### 9. Sorting Pattern → O(n log n)
+### Concept 9 — Sorting → O(n log n)
 
 ```php
-sort($nums);
-// smallest → $nums[0]
-// largest  → $nums[n-1]
+sort($nums);   // O(n log n)
+$smallest = $nums[0];         // O(1)
+$largest  = $nums[count($nums) - 1];  // O(1)
 ```
+
+PHP's `sort()` runs in O(n log n). After sorting, the smallest and largest values are always at known index positions.
 
 | | Complexity |
 |---|---|
-| **Time** | O(n log n) |
-| **Auxiliary Space** | O(1) in-place sorting |
-
-> Sorting के बाद smallest/largest values index [0] और [n-1] पर मिल जाती हैं।
+| Time | O(n log n) — sorting dominates |
+| Auxiliary Space | O(1) — in-place sort |
 
 ---
 
-## 🧩 Pattern Recognition Cheat Sheet
+## 4. 🧠 Mental Model / Intuition
+
+**How to read any code for complexity:**
 
 ```
-Code देखो → Structure पहचानो:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Single loop                → O(n)
-  Two separate loops         → O(n)   ← n² नहीं!
-  Nested loop (same input)   → O(n²)
-  Loop halving each time     → O(log n)
-  Function called n times
-    + inner loop             → O(n²)
-  sort()                     → O(n log n)
-  in_array() inside loop     → O(n²)   ← TRAP!
-  HashMap lookup             → O(1) avg
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Step 1: Find all loops
+Step 2: Are they nested or separate?
+         Nested → multiply     → O(n × m)
+         Separate → add        → O(n + m) = O(n)
+Step 3: Does any loop halve its variable? → O(log n)
+Step 4: Any function calls inside loops?
+         → look inside that function — count its cost too
+Step 5: Is in_array() / linear search inside a loop?
+         → likely O(n²) — replace with HashMap
 ```
+
+**Key Insight:**
+
+The trap that catches most beginners: two separate loops look like they should be O(n²), but they are O(n). Nested loops look simple but are actually O(n²). Always check whether loops are *inside* each other or *after* each other.
 
 ---
 
-## ✅ PART 2 — Problems
+## 5. 🔄 Dry Run
 
-| # | Problem | Difficulty | Time | Space | Status |
-|---|---------|-----------|------|-------|--------|
-| P1 | Running Sum of 1d Array | 🟢 Easy | O(n) | O(1) | ✅ |
-| P2 | Find the Difference of Two Arrays | 🟢 Easy | O(n+m) | O(n+m) | ✅ |
-| P3 | Count Items Matching a Rule | 🟢 Easy | O(n) | O(1) | ✅ |
-| P4 | Maximum Product Difference | 🟢 Easy | O(n log n) | O(1) | ✅ |
-| P5 | How Many Numbers Are Smaller | 🟢 Easy | O(n) optimal | O(n) | ✅ |
-| P6 | Contains Duplicate | 🟢 Easy | O(n) optimal | O(n) | ✅ |
-| P7 | Two Sum | 🟢 Easy | O(n) optimal | O(n) | ✅ |
+### Two Sum — HashMap Approach
+
+```
+Input: nums = [2, 7, 11, 15], target = 9
+```
+
+| Step | i | num | complement (9 - num) | In Map? | Map State |
+|------|---|-----|----------------------|---------|-----------|
+| 1 | 0 | 2 | 7 | No | {2:0} |
+| 2 | 1 | 7 | 2 | Yes → [0, 1] | — |
+
+Answer found at step 2. No need to continue. This is O(n) — single pass with O(1) lookup per step.
+
+Compare with brute force:
+- Step 1: check (2,7) → sum = 9 → found
+- Best case: O(1), Worst case: O(n²) (last pair)
 
 ---
 
-### Problem 1 — Running Sum of 1d Array
-**Link:** https://leetcode.com/problems/running-sum-of-1d-array/
+## 6. 💻 Basic Implementation
 
-**Key Concept:** Single loop + in-place modification = O(n) time, O(1) auxiliary space
+```php
+<?php
 
+/**
+ * Day 05 — Core concept demonstrations
+ * Showing the key patterns for complexity recognition
+ */
+
+// ─────────────────────────────────────────
+// Concept: in_array() trap vs HashMap
+// ─────────────────────────────────────────
+
+$nums1 = [1, 2, 3, 4, 5];
+$nums2 = [3, 5, 7];
+
+// Slow — O(n²) — in_array inside loop
+$result_slow = [];
+foreach ($nums1 as $num) {
+    if (!in_array($num, $nums2)) {   // O(n) per call
+        $result_slow[] = $num;
+    }
+}
+
+// Fast — O(n) — HashMap lookup
+$set = [];
+foreach ($nums2 as $num) {
+    $set[$num] = true;               // build once — O(n)
+}
+
+$result_fast = [];
+foreach ($nums1 as $num) {
+    if (!isset($set[$num])) {        // O(1) lookup
+        $result_fast[] = $num;
+    }
+}
+
+echo "Slow result: " . implode(', ', $result_slow) . PHP_EOL;  // 1, 2, 4
+echo "Fast result: " . implode(', ', $result_fast) . PHP_EOL;  // 1, 2, 4
 ```
-Input:  [1, 2, 3, 4]
-Output: [1, 3, 6, 10]
-Logic:  nums[i] += nums[i-1]
-```
+
+### What this implementation shows:
+- Both produce the same result
+- The slow version is O(n²) because `in_array()` is called n times, each taking O(n)
+- The fast version is O(n) because HashMap lookup is O(1)
+- This is the most important optimization pattern for PHP developers
 
 ---
 
-### Problem 2 — Find the Difference of Two Arrays
-**Link:** https://leetcode.com/problems/find-the-difference-of-two-arrays/
+## 7. 🧩 Patterns Learned
 
-**Key Concept:** `in_array()` trap → HashMap से O(n²) को O(n) करो
-
-```
-nums1 = [1,2,3], nums2 = [3,5,7]
-Answer: [[1,2], [5,7]]
-Brute:  O(n × m) — in_array() inside loop
-Optimal: O(n + m) — HashMap/Set use करो
-```
-
----
-
-### Problem 3 — Count Items Matching a Rule
-**Link:** https://leetcode.com/problems/count-items-matching-a-rule/
-
-**Key Concept:** Single pass, specific index check
-
-```
-ruleKey decides which index (0,1,2)
-Single loop → O(n), O(1) space
-```
+| Pattern | Code Signal | Complexity |
+|---------|-------------|------------|
+| Single loop | `for`, `foreach` | O(n) |
+| Two separate loops | loop, then another loop | O(n) |
+| Nested loops | loop inside loop | O(n²) |
+| Halving pattern | `$i /= 2`, `$i *= 2` | O(log n) |
+| Function called n times, inner loop | outer loop + function with inner loop | O(n²) |
+| In-place modification | `$arr[$i] += ...` | O(1) auxiliary space |
+| `in_array()` inside loop | linear search inside iteration | O(n²) TRAP |
+| HashMap lookup | `isset($map[$key])` | O(1) average |
+| PHP `sort()` | `sort($arr)` | O(n log n) |
 
 ---
 
-### Problem 4 — Maximum Product Difference
-**Link:** https://leetcode.com/problems/maximum-product-difference-between-two-pairs/
+## 8. 🔢 Problems Solved
 
-**Key Concept:** Sorting → smallest and largest at known indices
-
-```
-Sort → (last × second_last) - (first × second)
-Time: O(n log n) due to sort
-Space: O(1) auxiliary
-```
-
----
-
-### Problem 5 — How Many Numbers Are Smaller Than Current
-**Link:** https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
-
-**Key Concept:** Brute O(n²) → Sort + Prefix Count O(n)
-
-```
-Input:  [8, 1, 2, 2, 3]
-Output: [4, 0, 1, 1, 3]
-
-Brute:  Nested loop → O(n²)
-Optimal: Sort → count frequency → prefix sum → O(n)
-```
+| # | Problem | Platform | Difficulty | Pattern Used | Status | Time | Space |
+|---|---------|----------|------------|--------------|--------|------|-------|
+| 1 | Running Sum of 1d Array | LeetCode | Easy | Single loop, in-place | ✅ Solved Independently | O(n) | O(1) |
+| 2 | Find the Difference of Two Arrays | LeetCode | Easy | HashMap optimization | ✅ Solved Independently | O(n+m) | O(n+m) |
+| 3 | Count Items Matching a Rule | LeetCode | Easy | Single loop, index mapping | ✅ Solved Independently | O(n) | O(1) |
+| 4 | Maximum Product Difference | LeetCode | Easy | Sort, then index access | ✅ Solved Independently | O(n log n) | O(1) |
+| 5 | How Many Numbers Are Smaller | LeetCode | Easy | Brute O(n²) → Sort + prefix O(n log n) | ✅ Solved Independently | O(n log n) | O(n) |
+| 6 | Contains Duplicate | LeetCode | Easy | Brute O(n²) → HashMap O(n) | ✅ Solved Independently | O(n) | O(n) |
+| 7 | Two Sum | LeetCode | Easy | Brute O(n²) → HashMap O(n) | ✅ Solved Independently | O(n) | O(n) |
 
 ---
 
-### Problem 6 — Contains Duplicate
-**Link:** https://leetcode.com/problems/contains-duplicate/
+## 9. ❌ Mistakes and Learnings
 
-**Key Concept:** Brute O(n²) → HashMap O(n)
+### What confused me today:
 
-```
-Input:  [1, 2, 3, 1] → true
-Input:  [1, 2, 3, 4] → false
+- Initially thought two separate loops = O(n²) — it is actually O(n)
+- Forgot that `in_array()` is O(n) internally — it looks like a simple check but it scans the entire array
+- In Problem 5, handling duplicates in the sorted array was tricky — needed to store only the **first** occurrence index
 
-Brute:  Check all pairs → O(n²)
-Optimal: Store in HashMap, check if exists → O(n)
-```
+### What became clearer today:
 
----
-
-### Problem 7 — Two Sum
-**Link:** https://leetcode.com/problems/two-sum/
-
-**Key Concept:** Classic Brute O(n²) → HashMap O(n)
-
-```
-nums = [2, 7, 11, 15], target = 9
-Output: [0, 1]  (2 + 7 = 9)
-
-Brute:  Nested loop → O(n²)
-Optimal: complement = target - current
-         Check HashMap for complement → O(n)
-```
+- Loop structure matters more than loop count — nested = multiply, separate = add
+- Every time you write `in_array()` inside a loop, ask: can I pre-build a HashMap instead?
+- Auxiliary space is only the *extra* memory used — the input array itself is not counted
+- `sort()` is O(n log n) — always state this in interviews when you sort before your O(n) logic
 
 ---
 
-## 📊 Day 5 Status
+## 10. 📝 Revision Notes
 
-| Section | Status |
-|---------|--------|
-| Single Loop O(n) | ✅ |
-| Separate Loops O(n) | ✅ |
-| Nested Loop O(n²) | ✅ |
-| Halving O(log n) | ✅ |
-| Function × n Calls | ✅ |
-| In-place Space O(1) | ✅ |
-| `in_array()` complexity | ✅ |
-| HashMap concept | ✅ |
-| Sorting O(n log n) | ✅ |
-| Problem 1 — Running Sum | ✅ |
-| Problem 2 — Find Difference | ✅ |
-| Problem 3 — Count Items | ✅ |
-| Problem 4 — Max Product Diff | ✅ |
-| Problem 5 — Brute Force | ✅ |
-| Problem 5 — Optimized | ✅ |
-| Problem 6 — Contains Duplicate | ✅ |
-| Problem 7 — Two Sum | ✅ |
+- 📌 Single loop = O(n)
+- 📌 Two separate loops = O(n), NOT O(n²)
+- 📌 Nested loops (same input) = O(n²)
+- 📌 Loop halving each step = O(log n)
+- 📌 `in_array()` = O(n) — inside a loop it becomes O(n²)
+- 📌 HashMap lookup = O(1) average — always safe to assume in interviews
+- 📌 `sort()` = O(n log n)
+- 📌 Auxiliary space = extra memory only, not counting input
+- 📌 In-place modification = O(1) auxiliary space
 
 ---
 
-## 🔑 Key Takeaways
+## 11. 📋 Day Summary
 
-1. **Two separate loops ≠ O(n²)** — यह सबसे common confusion है
-2. **`in_array()` inside a loop = hidden O(n²)** — PHP developers का common trap
-3. **HashMap = O(1) lookup** — Search-heavy problems को O(n) में solve करने का weapon
-4. **Sort first** — अगर min/max चाहिए और O(n log n) acceptable है
-5. **Auxiliary space ≠ Total space** — Input को count नहीं करते
+| Metric | Value |
+|--------|-------|
+| Problems Attempted | 7 |
+| Solved Independently | 7 |
+| Solved After Hint | 0 |
+| Studied from Solution | 0 |
+| New Patterns Learned | 9 |
+| Time Spent (approx.) | — |
+
+**Key Learning of the Day:**
+> Two separate loops add (O(n) + O(n) = O(n)). Nested loops multiply (O(n) × O(n) = O(n²)). HashMap turns O(n²) linear search into O(n).
+
+**Confidence Level:** 🟢 High
+
+**Revision Needed:** Light — review the in_array() trap and the separate vs nested loop rule
+
+**Tomorrow's Topic Preview:** Day 06 — Complexity in Real Code (analyzing complete algorithms end-to-end)
 
 ---
 
-> *"Pattern recognition speed ही interview mein fark dalti hai."*
+> *"Pattern recognition speed is what separates good programmers from great interviewers."*
