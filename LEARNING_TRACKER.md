@@ -8,14 +8,14 @@
 
 | Day | Date | Topic | Problems Attempted | Solved Independently | Hint Used | Studied | Status |
 |-----|------|-------|--------------------|---------------------|-----------|---------|--------|
-| 01 | | Algorithm & Complexity Intro | | | | | 🔲 |
-| 02 | | Big O Deep Dive | | | | | 🔲 |
-| 03 | | Space Complexity & Recursion Cost | | | | | 🔲 |
-| 04 | | PHP Basics Review + Complexity Practice | | | | | 🔲 |
-| 05 | 2026-09-07 | Complexity Problem Patterns | 7 | 7 | 0 | ✅ | ✅ |
+| 01 | 2026-09-03 | Algorithm & Complexity Intro | 5 | 5 | 0 | 0 | ✅ |
+| 02 | 2026-09-04 | Big O Deep Dive | 4 | 4 | 0 | 0 | ✅ |
+| 03 | 2026-09-05 | Space Complexity & Recursion Cost | 4 | 4 | 0 | 0 | ✅ |
+| 04 | 2026-09-06 | PHP Built-in Complexity | 4 | 4 | 0 | 0 | ✅ |
+| 05 | 2026-09-07 | Complexity Pattern Recognition | 7 | 7 | 0 | 0 | ✅ |
 | 06 | | Complexity in Real Code | | | | | 🔲 |
 | 07 | | **Revision Day** — Phase 1 | | | | | 🔲 |
-| 08 | | Arrays — Fundamentals | | | | | 🔲 |
+| 08 | 2026-09-11 | Arrays — Fundamentals | 4 | 4 | 0 | 0 | 🔄 |
 | 09 | | Arrays — Two Pointers | | | | | 🔲 |
 | 10 | | Arrays — Prefix Sum | | | | | 🔲 |
 | 11 | | Arrays — Sliding Window (Fixed) | | | | | 🔲 |
@@ -77,49 +77,64 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 7 |
-| **Solved Independently** | 7 |
+| **Total Problems Attempted** | 28 |
+| **Solved Independently** | 28 |
 | **Solved After Hint** | 0 |
 | **Studied from Solution** | 0 |
-| **Easy Problems** | 7 |
+| **Easy Problems** | 28 |
 | **Medium Problems** | 0 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |
+
+> **Core target:** 120–180 quality problem-solving attempts by Day 60.
+> **Optional stretch:** 150–200 if time and energy allow.
+> Quality over quantity — deep understanding of one problem is worth more than skimming five.
 
 ---
 
 ## 🧩 Pattern Mastery Tracker
 
-| Pattern | First Encountered | Problems Solved | Confidence |
-|---------|------------------|-----------------|-----------|
-| Two Pointers | | 0 | 🔴 Not Started |
-| Sliding Window (Fixed) | | 0 | 🔴 Not Started |
-| Sliding Window (Variable) | | 0 | 🔴 Not Started |
-| Prefix Sum | | 0 | 🔴 Not Started |
-| Frequency Counting | | 0 | 🔴 Not Started |
-| HashMap / HashSet | | 0 | 🔴 Not Started |
-| Binary Search | | 0 | 🔴 Not Started |
-| Merge Sort | | 0 | 🔴 Not Started |
-| Quick Sort | | 0 | 🔴 Not Started |
-| Recursion | | 0 | 🔴 Not Started |
-| Backtracking | | 0 | 🔴 Not Started |
-| Fast & Slow Pointers | | 0 | 🔴 Not Started |
-| Stack (Monotonic) | | 0 | 🔴 Not Started |
-| BFS (Tree) | | 0 | 🔴 Not Started |
-| DFS (Tree) | | 0 | 🔴 Not Started |
-| BFS (Graph) | | 0 | 🔴 Not Started |
-| DFS (Graph) | | 0 | 🔴 Not Started |
-| Topological Sort | | 0 | 🔴 Not Started |
-| Greedy | | 0 | 🔴 Not Started |
-| 1D Dynamic Programming | | 0 | 🔴 Not Started |
-| 2D Dynamic Programming | | 0 | 🔴 Not Started |
-| Knapsack | | 0 | 🔴 Not Started |
-| LIS (Longest Increasing Subsequence) | | 0 | 🔴 Not Started |
-| Trie | | 0 | 🔴 Not Started |
-| Bit Manipulation | | 0 | 🔴 Not Started |
-| Union Find (DSU) | | 0 | 🔴 Not Started |
+> **8-Level Mastery Scale:**
+> L1-Understand | L2-Implement | L3-Easy | L4-Medium | L5-Variation | L6-Blind | L7-Explain | L8-Interview
 
-> **Confidence:** 🔴 Not Started | 🟡 Learning | 🟠 Practiced | 🟢 Confident
+| Pattern | First Encountered | Problems Solved | Mastery Level | Next Review |
+|---------|------------------|-----------------|---------------|-------------|
+| Two Pointers | — | 0 | L1 — Not started | — |
+| Sliding Window (Fixed) | — | 0 | L1 — Not started | — |
+| Sliding Window (Variable) | — | 0 | L1 — Not started | — |
+| Prefix Sum | — | 0 | L1 — Not started | — |
+| Frequency Counting | Day 05 | 2 | L3 — Easy | Day 12 |
+| HashMap / HashSet | Day 05 | 3 | L3 — Easy | Day 12 |
+| Binary Search | — | 0 | L1 — Not started | — |
+| Merge Sort | — | 0 | L1 — Not started | — |
+| Quick Sort | — | 0 | L1 — Not started | — |
+| Recursion | — | 0 | L1 — Not started | — |
+| Backtracking | — | 0 | L1 — Not started | — |
+| Fast & Slow Pointers | — | 0 | L1 — Not started | — |
+| Stack (Monotonic) | — | 0 | L1 — Not started | — |
+| BFS (Tree) | — | 0 | L1 — Not started | — |
+| DFS (Tree) | — | 0 | L1 — Not started | — |
+| BFS (Graph) | — | 0 | L1 — Not started | — |
+| DFS (Graph) | — | 0 | L1 — Not started | — |
+| Topological Sort | — | 0 | L1 — Not started | — |
+| Greedy | — | 0 | L1 — Not started | — |
+| 1D Dynamic Programming | — | 0 | L1 — Not started | — |
+| 2D Dynamic Programming | — | 0 | L1 — Not started | — |
+| Knapsack | — | 0 | L1 — Not started | — |
+| LIS (Longest Increasing Subsequence) | — | 0 | L1 — Not started | — |
+| Trie | — | 0 | L1 — Not started | — |
+| Bit Manipulation | — | 0 | L1 — Not started | — |
+| Union Find (DSU) | — | 0 | L1 — Not started | — |
+
+> **Mastery Scale:**
+> - **L1 — Understand:** Can explain the pattern
+> - **L2 — Implement:** Can implement from scratch
+> - **L3 — Easy:** Can solve Easy problems independently
+> - **L4 — Medium:** Can solve Medium problems independently
+> - **L5 — Variation:** Can solve variations with different problem statements
+> - **L6 — Blind:** Can identify pattern in a new, unseen problem
+> - **L7 — Explain:** Can explain WHY it works and why alternatives are worse
+> - **L8 — Interview:** Can solve and communicate under timed interview pressure
 
 ---
 
@@ -127,18 +142,24 @@
 
 | Revision Day | Day # | Topics to Cover | Status |
 |-------------|-------|----------------|--------|
-| Phase 1 Revision | Day 07 | Complexity, Big O | 🔲 |
-| Phase 2 Revision | Day 16 | Arrays, Strings | 🔲 |
-| Phase 3 Revision | Day 21 | Hashing, Frequency | 🔲 |
-| Phase 4 Revision | Day 27 | Binary Search, Sorting | 🔲 |
+| Phase 1 Revision | Day 07 | Complexity, Big O, PHP traps | 🔲 |
+| Phase 2 Revision | Day 16 | Arrays, Strings, Two Pointers, Prefix Sum, Sliding Window | 🔲 |
+| Phase 3 Revision | Day 21 | Hashing, HashSet, Frequency Counting | 🔲 |
+| Phase 4 Revision | Day 27 | Binary Search, Sorting algorithms | 🔲 |
 | Phase 5 Revision | Day 32 | Recursion, Backtracking | 🔲 |
-| Phase 6 Revision | Day 38 | Linked List, Stack, Queue | 🔲 |
+| Phase 6 Revision | Day 38 | Linked List, Stack, Queue, Monotonic Stack | 🔲 |
 | Phase 7 Revision | Day 44 | Trees, BST | 🔲 |
-| Midpoint Full Revision | Day 35 | All Phase 1–5 mixed | 🔲 |
-| Pre-Advanced Revision | Day 50 | All previous topics | 🔲 |
-| Mock Practice 1 | Day 55 | Mixed timed problems | 🔲 |
-| Mock Practice 2 | Day 58 | Mixed timed problems | 🔲 |
+| Phase 9+10 Revision | Day 50 | Graphs + Greedy (built into Day 50) | 🔲 |
 | Final Simulation | Day 60 | Full interview simulation | 🔲 |
+
+> **Note:** Days 07, 16, 21, 27, 32, 38, 44, 50, 60 are the dedicated revision days per the roadmap.
+> All other days follow the topic schedule exactly — there are no additional "full revision" days inserted.
+
+> **Spaced Repetition (built into daily routine):**
+> - **Every morning (5 min):** Recall what you learned yesterday without looking at notes
+> - **After 3–5 days:** Revisit 1–2 hard problems from earlier in the phase
+> - **During revision days:** Solve 4–5 problems on old topics, then move forward
+> This replaces the need for separate "midpoint revision" days that conflict with the topic schedule.
 
 ---
 
