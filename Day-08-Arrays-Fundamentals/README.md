@@ -1,9 +1,9 @@
 # Day 08 — Arrays: Fundamentals
 
-> **Date:** 2026-09-11
+> **Date:** 2026-09-13
 > **Phase:** Phase 2 — Arrays and Strings
 > **Difficulty Level:** Beginner
-> **Status:** 🔄 In Progress
+> **Status:** ✅ Completed / Mastered
 
 ---
 
@@ -12,10 +12,10 @@
 - [x] Understand what an array is and why it exists
 - [x] Understand index-based O(1) access vs O(n) value search
 - [x] State the complexity of every array operation with reasoning
-- [x] Implement: traversal, find min/max, reverse in-place
-- [ ] Implement: rotate array by k positions
-- [ ] Solve 4–5 easy practice problems on LeetCode
-- [ ] Final mastery self-assessment
+- [x] Implement traversal, find min/max, reverse in-place
+- [x] Implement rotate array by k positions
+- [x] Complete the Easy array practice completed during Day 08
+- [x] Complete final mastery self-assessment
 
 ---
 
@@ -198,21 +198,44 @@ Find Minimum:
 
 ---
 
-## 5. 🔄 Dry Run — In-Place Reverse
+## 5. 🔄 Dry Runs
 
-```
+### 1. Reverse Array In-Place
+```text
 Input:  [10, 20, 30, 40, 50]
-Goal:   Reverse without creating a new array
-
 left = 0, right = 4
-
-Step 1: swap(arr[0], arr[4]) → [50, 20, 30, 40, 10]   left=1, right=3
-Step 2: swap(arr[1], arr[3]) → [50, 40, 30, 20, 10]   left=2, right=2
+Step 1: swap(10, 50) → [50, 20, 30, 40, 10], left=1, right=3
+Step 2: swap(20, 40) → [50, 40, 30, 20, 10], left=2, right=2
 Step 3: left >= right → STOP
+```
 
-Output: [50, 40, 30, 20, 10] ✓
-Time:   O(n)
-Space:  O(1) — no new array created
+### 2. Rotate Array by K (Reverse Trick)
+```text
+Input: [1, 2, 3, 4, 5], k = 2
+Step 1: Reverse whole array → [5, 4, 3, 2, 1]
+Step 2: Reverse first k (2) elements → [4, 5, 3, 2, 1]
+Step 3: Reverse remaining n-k (3) elements → [4, 5, 1, 2, 3]
+```
+
+### 3. Move Zeroes (Placement Pointer)
+```text
+Input: [0, 1, 0, 3, 12]
+write = 0
+read 0: arr[0]=0 (skip)
+read 1: arr[1]=1 → arr[0]=1, write=1
+read 2: arr[2]=0 (skip)
+read 3: arr[3]=3 → arr[1]=3, write=2
+read 4: arr[4]=12 → arr[2]=12, write=3
+End read. Fill remaining (write 3, 4) with 0 → [1, 3, 12, 0, 0]
+```
+
+### 4. Remove Duplicates from Sorted Array (Read/Write Pointer)
+```text
+Input: [1, 1, 2]
+write = 1
+read 1: arr[1]==arr[0] (skip)
+read 2: arr[2]!=arr[1] (2!=1) → arr[1]=2, write=2
+Return write (2). Array: [1, 2, ...]
 ```
 
 ---
@@ -222,11 +245,15 @@ Space:  O(1) — no new array created
 See `problems/` folder for all implementations.
 
 ```bash
-php problems/manual-array-traversal.php
-php problems/find-minimum.php
-php problems/find-maximum.php
-php problems/reverse-array-in-place.php
-php problems/rotate-array.php
+php problems/problem-01-manual-array-traversal.php
+php problems/problem-02-find-minimum.php
+php problems/problem-03-find-maximum.php
+php problems/problem-04-reverse-array-in-place.php
+php problems/problem-05-rotate-array-right.php
+php problems/problem-06-array-sum.php
+php problems/problem-07-find-duplicates.php
+php problems/problem-08-move-zeroes.php
+php problems/problem-09-remove-duplicates-sorted.php
 ```
 
 ---
@@ -235,10 +262,13 @@ php problems/rotate-array.php
 
 | Pattern | Signal / Trigger | Complexity |
 |---------|-----------------|:----------:|
-| Traverse all elements | "visit each", "sum", "count" | O(n) |
+| Array Traversal | "visit each", "sum", "count" | O(n) |
 | Initialize-Compare-Update | "find min/max/sum" | O(n), O(1) space |
-| Two-Pointer Swap (in-place) | "reverse in-place", "no extra space" | O(n), O(1) space |
-| Direct index access | "index is known" | O(1) |
+| Two-Pointer In-Place Swap | "reverse in-place", "no extra space" | O(n), O(1) space |
+| Reverse Trick | "rotate by k positions" | O(n), O(1) space |
+| Write / Placement Pointer | "move zeroes", "preserve relative order" | O(n), O(1) space |
+| Read / Write Pointer | "remove duplicates from sorted array" | O(n), O(1) space |
+| Brute Force Nested Traversal | "find duplicates (no hashmap allowed)" | O(n²) |
 
 ---
 
@@ -253,6 +283,11 @@ php problems/rotate-array.php
 - "Can you reverse an array without extra space?"
 - "Rotate this array by k positions."
 - "What is the difference between O(1) access and O(n) search?"
+- "How do you identify a Two Pointer problem?"
+- "Why does the Rotate Reverse Trick work?"
+- "Why is Move Zeroes a Placement Pointer problem?"
+- "Why does sorted input make duplicate removal easier?"
+- "Why can brute force duplicate detection be O(n²)?"
 
 **Answers practiced today:**
 
@@ -260,9 +295,12 @@ php problems/rotate-array.php
 |----------|--------|
 | Why is index access O(1)? | When index is known, element is accessed directly without traversing previous elements |
 | Why is beginning insertion O(n)? | Existing elements may need to shift right to make space |
-| What does in-place mean? | Modify the existing structure without creating another structure proportional to input size |
+| What does in-place mean? | Modify the existing structure without extra auxiliary space proportional to input size |
 | Best case of Linear Search? | O(1) — target is the first element |
 | Worst case of Linear Search? | O(n) — target is last or absent |
+| How do you identify a Two Pointer problem? | Looking for pairs, comparing elements from ends, or maintaining in-place read/write pointers |
+| Why does sorted input make duplicate removal easier? | Duplicates are guaranteed to be adjacent, allowing O(n) removal with a single pass |
+| Why can brute force duplicate detection be O(n²)? | Because for each of the $n$ elements, we may need to scan the remaining elements (or use `in_array()` which itself is O(n)) |
 
 ---
 
@@ -274,7 +312,11 @@ php problems/rotate-array.php
 | 2 | Find Minimum | Custom | Easy | Initialize-Compare-Update | ✅ Solved Independently | O(n) | O(1) |
 | 3 | Find Maximum | Custom | Easy | Initialize-Compare-Update | ✅ Solved Independently | O(n) | O(1) |
 | 4 | Reverse Array In-Place | Custom | Easy | Two-Pointer Swap | ✅ Solved Independently | O(n) | O(1) |
-| 5 | Rotate Array by K | Custom | Easy-Medium | Reverse Trick | ⏳ In Progress | O(n) | O(1) |
+| 5 | Rotate Array by K Positions | Custom | Easy-Medium | Reverse Trick | ✅ Solved Independently | O(n) | O(1) |
+| 6 | Sum of Array Elements | Custom | Easy | Traversal | ✅ Solved Independently | O(n) | O(1) |
+| 7 | Find Duplicates — Brute Force | Custom | Easy | Nested Traversal | ✅ Solved Independently | O(n²) | O(n) |
+| 8 | Move Zeroes | Custom | Easy | Write / Placement Pointer | ✅ Solved Independently | O(n) | O(1) |
+| 9 | Remove Duplicates from Sorted Array | Custom | Easy | Read / Write Pointer | ✅ Solved Independently | O(n) | O(1) |
 
 ---
 
@@ -335,6 +377,49 @@ Result: O(n) time, O(1) extra space
 
 ---
 
+### Mistake 5 — Rotate vs Reverse Confusion
+
+**What I thought:** Rotate array just means reversing it or shifting elements one by one.
+
+**Correct thinking:** Shifting one by one is O(n²). The optimized O(n) "Reverse Trick" involves 3 steps: 
+1. Reverse entire array 
+2. Reverse first `k` elements 
+3. Reverse remaining `n-k` elements.
+
+---
+
+### Mistake 6 — Ignoring $k > n$ in Rotation
+
+**What I thought:** We can just rotate by any $k$ directly.
+
+**What was wrong:** If $k$ is greater than the array length $n$, doing it naively causes out-of-bounds or redundant work.
+
+**Correct approach:** Always do `$k = $k % $n` before rotating.
+
+---
+
+### Learning 7 — Two Pointers: Move Zeroes (Write Pointer)
+
+**Learning:** Instead of swapping arbitrarily, use a `write` pointer to track where the next non-zero element should go. Iterate with a `read` pointer, and whenever a non-zero is found, place it at the `write` pointer and increment `write`.
+
+---
+
+### Learning 8 — Two Pointers: Remove Duplicates (Read/Write Pointer)
+
+**Learning:** Similar to Move Zeroes. Since the array is sorted, duplicates are adjacent. Use a `write` pointer (starting at index 1). Compare current element with previous; if different, place at `write` pointer and increment `write`.
+
+---
+
+### Mistake 9 — `in_array()` Hidden Complexity Trap
+
+**What I thought:** `in_array()` is a fast O(1) built-in function to check duplicates.
+
+**What was wrong:** `in_array()` itself is O(n). Repeated use inside a loop can make the overall solution O(n²).
+
+**Correct approach:** Since we are focusing on fundamentals and brute force today, nested traversal (or repeated `in_array`) is intentionally used to demonstrate O(n²). HashMap optimization (O(1) lookups) will be introduced in a future phase (Day 17).
+
+---
+
 ## 10. 📝 Revision Notes
 
 - 📌 **Array index access = O(1)** — index is known → direct address calculation
@@ -346,6 +431,10 @@ Result: O(n) time, O(1) extra space
 - 📌 **Linear Search:** Best O(1), Worst O(n) — NOT O(log n)
 - 📌 **`$arr[500]` = index 500, NOT value 500**
 - 📌 **Pattern trigger:** "Traverse + compare" → Initialize-Compare-Update
+- 📌 **Rotate trick:** Reverse all, reverse first k, reverse remaining n-k.
+- 📌 **k > n constraint:** Always `$k = $k % $n`
+- 📌 **`in_array()` inside loop = O(n²) trap!** Use Hash Map / Associative array for O(1) lookups.
+- 📌 **Read/Write Pointers:** Useful for in-place filtering (Remove duplicates, Move Zeroes).
 
 ---
 
@@ -353,12 +442,13 @@ Result: O(n) time, O(1) extra space
 
 | Metric | Value |
 |--------|-------|
-| Problems Attempted | 4 (+ rotation pending) |
-| Solved Independently | 4 |
+| Problems Attempted | 9 |
+| Solved Independently | 9 |
 | Solved After Hint | 0 |
 | Studied from Solution | 0 |
-| New Patterns Learned | 3 (Traversal, Init-Compare-Update, Two-Pointer Swap) |
-| Mistakes Documented | 4 |
+| Actual LeetCode Problems Solved | 0 |
+| New Patterns Learned | 7 (Traversal, Init-Compare-Update, Two-Pointer Swap, Reverse Trick, Write Pointer, Read/Write Pointer, Brute Force) |
+| Mistakes Documented | 9 |
 | Time Spent (approx.) | — |
 
 **Key Learning of the Day:**
@@ -370,12 +460,14 @@ Result: O(n) time, O(1) extra space
 |---------|-------|
 | Array Traversal | Level 3 — Can solve Easy problems independently |
 | Initialize-Compare-Update | Level 3 — Can solve Easy problems independently |
-| Two-Pointer In-Place Swap | Level 2 — Can implement from scratch |
-| Rotate Array (Reverse trick) | Level 1 — Understanding in progress |
+| Two-Pointer In-Place Swap | Level 3 — Can solve Easy problems independently |
+| Rotate Array (Reverse Trick) | Level 3 — Can solve Easy problems independently |
+| Write / Placement Pointer | Level 3 — Can solve Easy problems independently |
+| Read / Write Pointer | Level 3 — Can solve Easy problems independently |
 
-**Confidence Level:** 🟢 High on fundamentals | 🟡 Medium on rotation
+**Confidence Level:** 🟢 High 
 
-**Revision Needed:** Light — revisit Known Index vs Value Search distinction
+**Revision Needed:** None
 
 **Tomorrow's Topic Preview:** Day 09 — Arrays: Two Pointers Pattern
 

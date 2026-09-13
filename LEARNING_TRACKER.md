@@ -15,7 +15,7 @@
 | 05 | 2026-09-07 | Complexity Pattern Recognition | 7 | 7 | 0 | 0 | ✅ |
 | 06 | | Complexity in Real Code | | | | | 🔲 |
 | 07 | | **Revision Day** — Phase 1 | | | | | 🔲 |
-| 08 | 2026-09-11 | Arrays — Fundamentals | 4 | 4 | 0 | 0 | 🔄 |
+| 08 | 2026-09-11 | Arrays — Fundamentals | 9 | 9 | 0 | 0 | ✅ |
 | 09 | | Arrays — Two Pointers | | | | | 🔲 |
 | 10 | | Arrays — Prefix Sum | | | | | 🔲 |
 | 11 | | Arrays — Sliding Window (Fixed) | | | | | 🔲 |
@@ -77,11 +77,11 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 28 |
-| **Solved Independently** | 28 |
+| **Total Problems Attempted** | 33 |
+| **Solved Independently** | 33 |
 | **Solved After Hint** | 0 |
 | **Studied from Solution** | 0 |
-| **Easy Problems** | 28 |
+| **Easy Problems** | 33 |
 | **Medium Problems** | 0 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |
