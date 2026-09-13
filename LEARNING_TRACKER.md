@@ -16,7 +16,7 @@
 | 06 | 2026-09-08 | Complexity in Real Code | 5 | 0 | 0 | 5 | ✅ |
 | 07 | 2026-09-09 | **Revision Day** — Phase 1 | 5 | 1 | 3 | 1 | ✅ |
 | 08 | 2026-09-11 | Arrays — Fundamentals | 9 | 9 | 0 | 0 | ✅ |
-| 09 | | Arrays — Two Pointers | | | | | 🔲 |
+| 09 | 2026-09-13 | Arrays — Two Pointers | 3 | 0 | 3 | 0 | ✅ |
 | 10 | | Arrays — Prefix Sum | | | | | 🔲 |
 | 11 | | Arrays — Sliding Window (Fixed) | | | | | 🔲 |
 | 12 | | Arrays — Sliding Window (Variable) | | | | | 🔲 |
@@ -77,11 +77,11 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 43 |
+| **Total Problems Attempted** | 46 |
 | **Solved Independently** | 34 |
-| **Solved After Hint** | 3 |
+| **Solved After Hint** | 6 |
 | **Studied from Solution** | 6 |
-| **Easy Problems** | 43 |
+| **Easy Problems** | 46 |
 | **Medium Problems** | 0 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |
@@ -99,7 +99,7 @@
 
 | Pattern | First Encountered | Problems Solved | Mastery Level | Next Review |
 |---------|------------------|-----------------|---------------|-------------|
-| Two Pointers | — | 0 | L1 — Not started | — |
+| Two Pointers | Day 09 | 3 | L2 — Implement | Day 16 |
 | Sliding Window (Fixed) | — | 0 | L1 — Not started | — |
 | Sliding Window (Variable) | — | 0 | L1 — Not started | — |
 | Prefix Sum | — | 0 | L1 — Not started | — |
