@@ -13,8 +13,8 @@
 | 03 | 2026-09-05 | Space Complexity & Recursion Cost | 4 | 4 | 0 | 0 | ✅ |
 | 04 | 2026-09-06 | PHP Built-in Complexity | 4 | 4 | 0 | 0 | ✅ |
 | 05 | 2026-09-07 | Complexity Pattern Recognition | 7 | 7 | 0 | 0 | ✅ |
-| 06 | | Complexity in Real Code | | | | | 🔲 |
-| 07 | | **Revision Day** — Phase 1 | | | | | 🔲 |
+| 06 | 2026-09-08 | Complexity in Real Code | 5 | 0 | 0 | 5 | ✅ |
+| 07 | 2026-09-09 | **Revision Day** — Phase 1 | 5 | 1 | 3 | 1 | ✅ |
 | 08 | 2026-09-11 | Arrays — Fundamentals | 9 | 9 | 0 | 0 | ✅ |
 | 09 | | Arrays — Two Pointers | | | | | 🔲 |
 | 10 | | Arrays — Prefix Sum | | | | | 🔲 |
@@ -77,11 +77,11 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 33 |
-| **Solved Independently** | 33 |
-| **Solved After Hint** | 0 |
-| **Studied from Solution** | 0 |
-| **Easy Problems** | 33 |
+| **Total Problems Attempted** | 43 |
+| **Solved Independently** | 34 |
+| **Solved After Hint** | 3 |
+| **Studied from Solution** | 6 |
+| **Easy Problems** | 43 |
 | **Medium Problems** | 0 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |

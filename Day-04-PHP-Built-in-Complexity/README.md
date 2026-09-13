@@ -515,19 +515,19 @@ php Day-04-PHP-Built-in-Complexity/problems/problem-01-in-array-vs-map-lookup.ph
 
 | Metric | Value |
 |--------|-------|
-| Problems Attempted | 0 / 4 |
-| Solved Independently | 0 |
-| Solved After Hint | 0 |
+| Problems Attempted | 4 |
+| Solved Independently | 3 |
+| Solved After Hint | 1 |
 | Studied from Solution | 0 |
-| New Patterns Learned | 0 |
+| New Patterns Learned | 4 |
 | Time Spent (approx.) | — |
 
 **Key Learning of the Day:**
 >
 
-**Confidence Level:** 🔴 Low / 🟡 Medium / 🟢 High
+**Confidence Level:** 🟡 Medium
 
-**Revision Needed:** Yes / No
+**Revision Needed:** No
 
 **Tomorrow's Topic Preview:** Day 05 — Complexity Pattern Recognition
 

@@ -1,4 +1,4 @@
-# Day 06 — Complexity Practice
+# Day 06 — Complexity in Real Code + Problem Solving
 
 > **Date:** 2026-09-08
 > **Phase:** Phase 1 — Foundations
@@ -326,7 +326,7 @@ php problems/problem-05-complexity-before-coding.php
 
 ## 8. 🔢 Problems Solved
 
-> Today was a **guided complexity mastery session**. Five complexity drills were completed and stored as individual runnable PHP files in `problems/`.
+> Today was a **guided complexity mastery session**. Five problems were completed and stored as individual runnable PHP files in `problems/`.
 
 | # | Mastery Check | Constraint | Key Skill | Status | Time | Space |
 |---|--------------|------------|-----------|--------|------|-------|
@@ -373,11 +373,10 @@ php problems/problem-05-complexity-before-coding.php
 
 | Metric | Value |
 |--------|-------|
-| Problems Attempted | 0 |
+| Problems Attempted | 5 |
 | Solved Independently | 0 |
 | Solved After Hint | 0 |
-| Studied from Solution | 0 |
-| Guided Complexity Drills Completed | 5 |
+| Studied from Solution | 5 |
 | New DSA Patterns Learned | 0 |
 | Complexity Concepts Strengthened | 6 |
 | Time Spent (approx.) | — |
