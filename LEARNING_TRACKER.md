@@ -17,7 +17,7 @@
 | 07 | 2026-09-09 | **Revision Day** — Phase 1 | 5 | 1 | 3 | 1 | ✅ |
 | 08 | 2026-09-11 | Arrays — Fundamentals | 9 | 9 | 0 | 0 | ✅ |
 | 09 | 2026-09-13 | Arrays — Two Pointers | 3 | 0 | 3 | 0 | ✅ |
-| 10 | | Arrays — Prefix Sum | | | | | 🔲 |
+| 10 | 2026-09-16 | Arrays — Prefix Sum | 3 | 1 | 2 | 0 | ✅ |
 | 11 | | Arrays — Sliding Window (Fixed) | | | | | 🔲 |
 | 12 | | Arrays — Sliding Window (Variable) | | | | | 🔲 |
 | 13 | | Strings — Fundamentals | | | | | 🔲 |
@@ -77,12 +77,12 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 46 |
-| **Solved Independently** | 34 |
-| **Solved After Hint** | 6 |
+| **Total Problems Attempted** | 49 |
+| **Solved Independently** | 35 |
+| **Solved After Hint** | 8 |
 | **Studied from Solution** | 6 |
-| **Easy Problems** | 46 |
-| **Medium Problems** | 0 |
+| **Easy Problems** | 47 |
+| **Medium Problems** | 2 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |
 
@@ -102,7 +102,7 @@
 | Two Pointers | Day 09 | 3 | L2 — Implement | Day 16 |
 | Sliding Window (Fixed) | — | 0 | L1 — Not started | — |
 | Sliding Window (Variable) | — | 0 | L1 — Not started | — |
-| Prefix Sum | — | 0 | L1 — Not started | — |
+| Prefix Sum | Day 10 | 3 | L2 — Implement | Day 17 |
 | Frequency Counting | Day 05 | 2 | L3 — Easy | Day 12 |
 | HashMap / HashSet | Day 05 | 3 | L3 — Easy | Day 12 |
 | Binary Search | — | 0 | L1 — Not started | — |
