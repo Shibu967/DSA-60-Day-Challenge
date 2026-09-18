@@ -18,7 +18,7 @@
 | 08 | 2026-09-11 | Arrays — Fundamentals | 9 | 9 | 0 | 0 | ✅ |
 | 09 | 2026-09-13 | Arrays — Two Pointers | 3 | 0 | 3 | 0 | ✅ |
 | 10 | 2026-09-16 | Arrays — Prefix Sum | 3 | 1 | 2 | 0 | ✅ |
-| 11 | | Arrays — Sliding Window (Fixed) | | | | | 🔲 |
+| 11 | 2026-09-18 | Arrays — Sliding Window (Fixed) | 3 | 3 | 0 | 0 | ✅ |
 | 12 | | Arrays — Sliding Window (Variable) | | | | | 🔲 |
 | 13 | | Strings — Fundamentals | | | | | 🔲 |
 | 14 | | Strings — Manipulation & Patterns | | | | | 🔲 |
@@ -77,11 +77,11 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 49 |
-| **Solved Independently** | 35 |
+| **Total Problems Attempted** | 52 |
+| **Solved Independently** | 38 |
 | **Solved After Hint** | 8 |
 | **Studied from Solution** | 6 |
-| **Easy Problems** | 47 |
+| **Easy Problems** | 50 |
 | **Medium Problems** | 2 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |
@@ -100,7 +100,7 @@
 | Pattern | First Encountered | Problems Solved | Mastery Level | Next Review |
 |---------|------------------|-----------------|---------------|-------------|
 | Two Pointers | Day 09 | 3 | L2 — Implement | Day 16 |
-| Sliding Window (Fixed) | — | 0 | L1 — Not started | — |
+| Sliding Window (Fixed) | Day 11 | 3 | L2 — Implement | Day 18 |
 | Sliding Window (Variable) | — | 0 | L1 — Not started | — |
 | Prefix Sum | Day 10 | 3 | L2 — Implement | Day 17 |
 | Frequency Counting | Day 05 | 2 | L3 — Easy | Day 12 |
