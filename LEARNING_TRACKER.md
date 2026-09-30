@@ -20,7 +20,7 @@
 | 10 | 2026-09-16 | Arrays — Prefix Sum | 3 | 1 | 2 | 0 | ✅ |
 | 11 | 2026-09-18 | Arrays — Sliding Window (Fixed) | 3 | 3 | 0 | 0 | ✅ |
 | 12 | 2026-09-19 | Arrays — Sliding Window (Variable) | 2 | 2 | 0 | 0 | ✅ |
-| 13 | | Strings — Fundamentals | | | | | 🔲 |
+| 13 | 2026-09-30 | Strings — Fundamentals | 2 | 2 | 0 | 0 | ✅ |
 | 14 | | Strings — Manipulation & Patterns | | | | | 🔲 |
 | 15 | | Mixed: Arrays + Strings Practice | | | | | 🔲 |
 | 16 | | **Revision Day** — Phase 2 | | | | | 🔲 |
@@ -77,11 +77,11 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 54 |
-| **Solved Independently** | 40 |
+| **Total Problems Attempted** | 56 |
+| **Solved Independently** | 42 |
 | **Solved After Hint** | 8 |
 | **Studied from Solution** | 6 |
-| **Easy Problems** | 50 |
+| **Easy Problems** | 52 |
 | **Medium Problems** | 4 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |
