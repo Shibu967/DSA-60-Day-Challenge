@@ -2,66 +2,166 @@
 
 # 🧠 DSA 60-Day Challenge
 
-**Building strong foundations in Data Structures, Algorithms, and problem-solving through a structured 60-day challenge.**
+**A structured, public record of a 60-day commitment to building strong foundations in Data Structures, Algorithms, problem-solving, and interview preparation.**
 
 ![Language](https://img.shields.io/badge/Language-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge)
-![Duration](https://img.shields.io/badge/Duration-60%20Days-blue?style=for-the-badge)
-![Level](https://img.shields.io/badge/Level-Beginner%20→%20Interview%20Ready-green?style=for-the-badge)
+![Days](https://img.shields.io/badge/Progress-14%20of%2060%20Days-blue?style=for-the-badge)
+![Problems](https://img.shields.io/badge/Problems%20Solved-60-green?style=for-the-badge)
 
 </div>
 
 ---
 
-## 📌 About This Repository
+## 📌 About This Challenge
 
-This repository is a **structured, public record** of my 60-day commitment to mastering Data Structures, Algorithms, and interview-oriented problem-solving.
+This repository documents my deliberate, day-by-day journey through Data Structures, Algorithms, complexity analysis, and pattern recognition — built on top of **3 years 8 months of professional backend engineering experience** in PHP and Laravel.
 
-I bring **3.8 years of professional backend engineering experience** in PHP and Laravel — strong production intuition, clean code habits, and real-world debugging skills. I am now channeling that engineering discipline into building deep DSA and algorithmic thinking from first principles.
+The goal is not to accumulate a large problem count. The goal is to build **deep algorithmic understanding** from first principles, strengthen **pattern recognition**, and develop **consistent, interview-ready problem-solving skills**.
 
-Every day in this repository represents deliberate practice: theory studied, concepts dry-run, code implemented, complexity analyzed, and mistakes documented. The emphasis is always on **understanding WHY something works** — not on accumulating solved problem counts.
+Every day in this repository contains:
+
+- Concept theory and explanations
+- Manual dry runs
+- PHP implementations
+- Time and Space complexity analysis
+- Documented mistakes and corrections
 
 > **Approach:** Learn it deeply. Implement it clearly. Document it honestly. Improve every single day.
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 What I Am Building
 
-By the end of this 60-day challenge, I aim to:
-
-- ✅ Understand core Data Structures from first principles
-- ✅ Learn and recognize common algorithmic patterns (Two Pointers, Sliding Window, Binary Search, BFS/DFS, Recursion, DP, Greedy)
-- ✅ Develop independent problem-solving skills — not memorization
-- ✅ Analyze Time and Space Complexity for every solution
-- ✅ Solve approximately **120–180 quality problems** across Easy and Medium levels
-- ✅ Build interview-ready thinking and coding confidence
-- ✅ Maintain consistent public documentation of my learning journey
-
----
-
-## 🧑‍💻 Programming Language
-
-All implementations and solutions are written in **PHP** — my primary professional language — so I can focus entirely on algorithmic thinking rather than language syntax.
+| Focus Area | Description |
+|---|---|
+| **Algorithmic Understanding** | WHY an approach works, not just HOW to code it |
+| **Pattern Recognition** | Identify reusable problem-solving patterns across problems |
+| **Complexity Analysis** | Time and Space complexity analyzed for every solution |
+| **Consistent Documentation** | Theory, dry runs, mistakes, and learnings recorded daily |
+| **Independent Problem Solving** | Attempt every problem independently before hints or solutions |
+| **Revision Strategy** | Structured revision days built into the curriculum |
 
 ---
 
-## 🗺️ Learning Methodology
+## 📊 Current Progress Dashboard
 
-Each day follows this deliberate flow:
+> All statistics derived from actual repository files. Last updated: Day 14 complete.
+
+| Metric | Count |
+|---|---:|
+| **Challenge Progress** | 14 / 60 Days |
+| **Problems Attempted** | 60 |
+| **Solved Independently** | 46 |
+| **Solved With Hint** | 8 |
+| **Studied From Solution** | 6 |
+| **Easy** | 56 |
+| **Medium** | 4 |
+| **Hard** | 0 |
+
+---
+
+## 🗂️ Day-wise Progress
+
+| Day | Date | Topic | Problems | Status |
+|-----|------|-------|----------|--------|
+| 01 | 2026-09-03 | Algorithm & Complexity Intro | 5 | ✅ Completed |
+| 02 | 2026-09-04 | Big O Deep Dive | 4 | ✅ Completed |
+| 03 | 2026-09-05 | Space Complexity & Recursion Cost | 4 | ✅ Completed |
+| 04 | 2026-09-06 | PHP Built-in Complexity | 4 | ✅ Completed |
+| 05 | 2026-09-07 | Complexity Pattern Recognition | 7 | ✅ Completed |
+| 06 | 2026-09-08 | Complexity in Real Code | 5 | ✅ Completed |
+| 07 | 2026-09-09 | Revision — Phase 1 (Complexity) | 5 | ✅ Completed |
+| 08 | 2026-09-11 | Arrays — Fundamentals | 9 | ✅ Completed |
+| 09 | 2026-09-13 | Arrays — Two Pointers | 3 | ✅ Completed |
+| 10 | 2026-09-16 | Arrays — Prefix Sum | 3 | ✅ Completed |
+| 11 | 2026-09-18 | Arrays — Sliding Window (Fixed) | 3 | ✅ Completed |
+| 12 | 2026-09-19 | Arrays — Sliding Window (Variable) | 2 | ✅ Completed |
+| 13 | 2026-09-30 | Strings — Fundamentals | 2 | ✅ Completed |
+| 14 | 2026-10-02 | Strings — Manipulation & Patterns | 4 | ✅ Completed |
+| 15 | — | Mixed: Arrays + Strings Practice | — | ⏳ Planned |
+| 16 | — | Revision — Phase 2 | — | ⏳ Planned |
+| 17–60 | — | Hashing → Graphs → DP → Advanced | — | ⏳ Planned |
+
+---
+
+## 🧩 Patterns Covered (Verified)
+
+| Pattern | First Seen | Problems Applied |
+|---|---|---:|
+| Complexity Analysis (Big O) | Day 01 | 34 |
+| Array Traversal & Manipulation | Day 08 | 9 |
+| Two Pointers | Day 09 | 3 |
+| Prefix Sum | Day 10 | 3 |
+| Sliding Window (Fixed Size) | Day 11 | 3 |
+| Sliding Window (Variable Size) | Day 12 | 2 |
+| Frequency Map (String) | Day 13 | 2 |
+| String Two Pointers | Day 14 | 2 |
+| Hash Map (Bijection/Mapping) | Day 14 | 1 |
+| Horizontal Scanning | Day 14 | 1 |
+
+> Only patterns with verified problem implementations are listed here.
+
+---
+
+## 🗺️ Full Roadmap (Planned)
+
+| Phase | Days | Topics |
+|---|---|---|
+| Phase 1: Foundations | 01–07 | Algorithm basics, Big O, Time & Space Complexity |
+| Phase 2: Arrays & Strings | 08–16 | Two Pointers, Sliding Window, Prefix Sum, Strings |
+| Phase 3: Hashing | 17–21 | HashMap, HashSet, Frequency Counting |
+| Phase 4: Search & Sort | 22–27 | Binary Search, Merge Sort, Quick Sort |
+| Phase 5: Recursion | 28–32 | Recursion, Backtracking, Subsets |
+| Phase 6: Linear DS | 33–38 | Linked List, Stack, Queue, Deque |
+| Phase 7: Trees | 39–44 | Binary Tree, Tree Traversals, BST |
+| Phase 8: Heaps | 45–46 | Min/Max Heap, Priority Queue |
+| Phase 9: Graphs | 47–50 | BFS, DFS, Topological Sort, Shortest Path |
+| Phase 10: Greedy | 51–52 | Greedy Algorithms, Intervals |
+| Phase 11: DP | 53–57 | 1D DP, 2D DP, Knapsack, LIS |
+| Phase 12: Advanced + Mock | 58–60 | Trie, Bit Manipulation, Union Find, Interview Simulation |
+
+---
+
+## 🧑‍💻 Language & Environment
+
+All implementations are written in **PHP** — my primary professional language — so the focus stays entirely on algorithmic thinking rather than language syntax.
+
+- **Language:** PHP
+- **Platform:** LeetCode (for standard problems), custom practice problems
+- **Documentation:** Markdown — theory, dry runs, complexity, mistakes
+
+---
+
+## ⚙️ How I Approach Each Problem
 
 ```
-Theory → Concept Understanding → Visual Dry Run → Basic Implementation
-    → Pattern Recognition → Problem Solving → Complexity Analysis
-        → Mistake Analysis → Revision → Documentation
+1. Read the problem carefully
+2. Understand constraints and edge cases
+3. Think of the brute force approach first
+4. Identify the bottleneck
+5. Optimize — recognize the applicable pattern
+6. Write pseudocode before coding
+7. Implement in PHP
+8. Trace through test cases manually
+9. Analyze Time and Space Complexity
+10. Document mistakes and key learnings
 ```
 
-| Principle | Approach |
-|-----------|----------|
-| 🎯 Understand, don't memorize | Learn WHY, not just HOW |
-| 🧩 Pattern recognition | Identify reusable problem-solving patterns |
-| 🔁 Spaced revision | Regular recall through structured revision days |
-| 📝 Document everything | Theory, dry runs, mistakes, and learnings |
-| 🚫 No copy-paste | Try independently first; study solutions mindfully |
+---
+
+## 🔁 Revision Strategy
+
+Dedicated revision days are built into the curriculum at the end of each phase:
+
+- **Day 07** — Revision: Phase 1 (Complexity) ✅
+- **Day 16** — Revision: Phase 2 (Arrays & Strings) ⏳
+- **Day 21** — Revision: Phase 3 (Hashing) ⏳
+- **Day 27** — Revision: Phase 4 (Search & Sort) ⏳
+- **Day 32** — Revision: Phase 5 (Recursion & Backtracking) ⏳
+- **Day 38** — Revision: Phase 6 (Linear DS) ⏳
+- **Day 44** — Revision: Phase 7 (Trees) ⏳
+- **Day 60** — Final Mock Interview Simulation ⏳
 
 ---
 
@@ -81,127 +181,26 @@ DSA-60-Day-Challenge/
 │
 ├── Day-01-Algorithm-Complexity/
 │   ├── README.md
-│   └── problems/
-│       ├── problem-01-find-maximum.php
-│       ├── problem-02-find-minimum.php
-│       ├── problem-03-count-evens.php
-│       ├── problem-04-sum-of-elements.php
-│       └── problem-05-linear-search.php
+│   └── problems/                ← 5 PHP problem files
 │
-├── Day-02-Complexity-Analysis/
+├── Day-02-Big-O-Deep-Dive/
 │   ├── README.md
-│   ├── learnings.md
-│   └── problems/
+│   └── problems/                ← 4 PHP problem files
 │
-└── ... (Day-03 through Day-60)
+├── ...
+│
+└── Day-14-Strings-Manipulation-and-Patterns/
+    ├── README.md
+    └── problems/                ← 4 PHP problem files
 ```
-
----
-
-## 🗂️ Topics Covered
-
-| Phase | Days | Topics |
-|-------|------|--------|
-| Phase 1: Foundations | 01–07 | Algorithm basics, Big O, Time & Space Complexity |
-| Phase 2: Arrays & Strings | 08–16 | Two Pointers, Sliding Window, Prefix Sum |
-| Phase 3: Hashing | 17–21 | HashMap, HashSet, Frequency Counting |
-| Phase 4: Search & Sort | 22–27 | Binary Search, Merge Sort, Quick Sort |
-| Phase 5: Recursion | 28–32 | Recursion, Backtracking, Subsets |
-| Phase 6: Linear DS | 33–38 | Linked List, Stack, Queue, Deque |
-| Phase 7: Trees | 39–44 | Binary Tree, Tree Traversals, BST |
-| Phase 8: Heaps | 45–46 | Min/Max Heap, Priority Queue |
-| Phase 9: Graphs | 47–50 | BFS, DFS, Topological Sort, Shortest Path |
-| Phase 10: Greedy | 51–52 | Greedy Algorithms, Intervals |
-| Phase 11: DP | 53–57 | 1D DP, 2D DP, Knapsack, LIS |
-| Phase 12: Advanced + Mock | 58–60 | Trie, Bit Manipulation, Union Find, Interview Simulation |
-
----
-
-## 📊 Progress Tracker
-
-| Phase | Days | Status |
-|-------|------|--------|
-| Phase 1: Foundations | 01–07 | 🔄 In Progress (Day 01 ✅ Day 02 ✅ Day 03 ✅ Day 04 ✅ Day 05 ✅) |
-| Phase 2: Arrays & Strings | 08–16 | 🔲 Not Started |
-| Phase 3: Hashing | 17–21 | 🔲 Not Started |
-| Phase 4: Search & Sort | 22–27 | 🔲 Not Started |
-| Phase 5: Recursion | 28–32 | 🔲 Not Started |
-| Phase 6: Linear DS | 33–38 | 🔲 Not Started |
-| Phase 7: Trees | 39–44 | 🔲 Not Started |
-| Phase 8: Heaps | 45–46 | 🔲 Not Started |
-| Phase 9: Graphs | 47–50 | 🔲 Not Started |
-| Phase 10: Greedy | 51–52 | 🔲 Not Started |
-| Phase 11: DP | 53–57 | 🔲 Not Started |
-| Phase 12: Advanced + Mock | 58–60 | 🔲 Not Started |
-
-> **Legend:** 🔲 Not Started | 🔄 In Progress | ✅ Completed
-
----
-
-## 📈 Problem-Solving Stats
-
-| Metric | Count |
-|--------|-------|
-| Total Problems Attempted | 24 |
-| Solved Independently | 24 |
-| Solved After Hint | 0 |
-| Studied from Solution | 0 |
-| Easy Problems | 24 |
-| Medium Problems | 0 |
-
-> *Updated regularly as I progress through the challenge.*
-
----
-
-
-
-## ⚙️ Daily Workflow
-
-1. **📖 Read** the day's topic from `ROADMAP.md`
-2. **📚 Study** theory — understand the WHY behind the concept
-3. **✏️ Dry Run** — simulate examples manually or in comments
-4. **💻 Implement** — write basic PHP code for the concept
-5. **🧩 Recognize** — identify patterns applicable to this concept
-6. **🔢 Solve** — attempt problems independently first
-7. **🔍 Analyze** — review time and space complexity
-8. **📝 Document** — fill in the daily README using `DAILY_TEMPLATE.md`
-9. **🔁 Revise** — spend 5–10 minutes recalling yesterday's concept
-
----
-
-## 🛠️ Git Commit Style
-
-```bash
-Day 01: Add algorithm and complexity fundamentals
-Day 08: Practice hashing and frequency counting patterns
-Day 21: Revision — arrays, strings, hashing core patterns
-Day 35: Add linked list implementation and reversal problems
-Day 53: Dynamic programming — 1D DP and climbing stairs pattern
-```
-
----
-
-## 🛠️ Key Skills Demonstrated
-
-| Skill | How It Shows Up in This Repository |
-|-------|------------------------------------|
-| **Problem-solving discipline** | Every problem attempted independently before hints or solutions |
-| **Algorithmic thinking** | Brute force → optimization path documented for every key problem |
-| **Complexity analysis** | Time and Space complexity analyzed and written for every solution |
-| **Documentation discipline** | Theory, dry runs, mistakes, and learnings recorded daily |
-| **Growth mindset** | Mistakes documented honestly — confusion treated as a learning signal |
-| **Consistency** | Daily commits reflecting real, incremental progress |
-| **Engineering background** | PHP/Laravel experience accelerates pattern recognition and code quality |
 
 ---
 
 ## 🙋 About Me
 
-I am a backend software engineer with **3.8 years of professional experience** building production systems in PHP and Laravel. I understand codebases at scale, design clean service-oriented architectures, and debug complex business logic under real constraints.
+I am a backend software engineer with **3 years 8 months of professional experience** building production systems in PHP and Laravel. I understand codebases at scale, design clean service-oriented architectures, and debug complex business logic under real constraints.
 
 This challenge is my deliberate investment in algorithmic thinking — learning Data Structures and problem-solving patterns from first principles, with the same engineering rigor I apply to production code.
-
-The goal is not a quick crash course. It is a **structured, 60-day foundation** that will compound into strong interview readiness and sharper engineering judgment.
 
 ---
 
