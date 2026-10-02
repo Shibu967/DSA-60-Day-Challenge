@@ -21,7 +21,7 @@
 | 11 | 2026-09-18 | Arrays — Sliding Window (Fixed) | 3 | 3 | 0 | 0 | ✅ |
 | 12 | 2026-09-19 | Arrays — Sliding Window (Variable) | 2 | 2 | 0 | 0 | ✅ |
 | 13 | 2026-09-30 | Strings — Fundamentals | 2 | 2 | 0 | 0 | ✅ |
-| 14 | | Strings — Manipulation & Patterns | | | | | 🔲 |
+| 14 | 2026-10-02 | Strings — Manipulation & Patterns | 4 | 4 | 0 | 0 | ✅ |
 | 15 | | Mixed: Arrays + Strings Practice | | | | | 🔲 |
 | 16 | | **Revision Day** — Phase 2 | | | | | 🔲 |
 | 17 | | Hashing — HashMap Fundamentals | | | | | 🔲 |
@@ -77,11 +77,11 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Problems Attempted** | 56 |
-| **Solved Independently** | 42 |
+| **Total Problems Attempted** | 60 |
+| **Solved Independently** | 46 |
 | **Solved After Hint** | 8 |
 | **Studied from Solution** | 6 |
-| **Easy Problems** | 52 |
+| **Easy Problems** | 56 |
 | **Medium Problems** | 4 |
 | **Hard Problems** | 0 |
 | **Target (by Day 60)** | 120–180 |
