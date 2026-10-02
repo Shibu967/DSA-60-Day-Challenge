@@ -70,12 +70,14 @@ Theory → Concept Understanding → Visual Dry Run → Basic Implementation
 ```
 DSA-60-Day-Challenge/
 │
+├── AGENTS.md                    ← AI agent instructions
+├── LEARNING_MODE.md             ← Learning mode configuration
+├── LEARNING_TRACKER.md          ← Overall progress and revision tracker
+├── PROBLEM_TEMPLATE.md          ← Template for documenting problems
 ├── README.md                    ← You are here
+├── REVISION_MODE.md             ← Revision mode configuration
 ├── ROADMAP.md                   ← Full 60-day topic plan
 ├── RULES.md                     ← Learning rules and discipline guide
-├── DAILY_TEMPLATE.md            ← Reusable daily documentation template
-├── PROBLEM_TEMPLATE.md          ← Problem documentation template
-├── LEARNING_TRACKER.md          ← Overall progress tracker
 │
 ├── Day-01-Algorithm-Complexity/
 │   ├── README.md
@@ -151,20 +153,7 @@ DSA-60-Day-Challenge/
 
 ---
 
-## 📚 Key Reference Files
 
-| File | Description |
-|------|-------------|
-| [ROADMAP.md](./ROADMAP.md) | Complete 60-day day-by-day plan |
-| [CAREER_ROADMAP.md](./CAREER_ROADMAP.md) | Full path from DSA to ₹50 LPA (System Design, LLD, Mocks) |
-| [RULES.md](./RULES.md) | Learning discipline and problem-solving rules |
-| [RESOURCES.md](./RESOURCES.md) | Which resource to use at which learning stage |
-| [DAILY_TEMPLATE.md](./DAILY_TEMPLATE.md) | Template for each day's documentation |
-| [PROBLEM_TEMPLATE.md](./PROBLEM_TEMPLATE.md) | Template for documenting important problems |
-| [LEARNING_TRACKER.md](./LEARNING_TRACKER.md) | Overall progress and revision tracker |
-| [PHP_COMPLEXITY_REFERENCE.md](./PHP_COMPLEXITY_REFERENCE.md) | Quick cheat sheet of PHP built-in function complexities |
-
----
 
 ## ⚙️ Daily Workflow
 
