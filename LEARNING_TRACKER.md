@@ -22,7 +22,7 @@
 | 12 | 2026-09-19 | Arrays — Sliding Window (Variable) | 2 | 2 | 0 | 0 | ✅ |
 | 13 | 2026-09-30 | Strings — Fundamentals | 2 | 2 | 0 | 0 | ✅ |
 | 14 | 2026-10-02 | Strings — Manipulation & Patterns | 4 | 4 | 0 | 0 | ✅ |
-| 15 | | Mixed: Arrays + Strings Practice | | | | | 🔲 |
+| 15 | 2026-10-06 | Mixed: Arrays + Strings Practice | 3 | 3 | 0 | 0 | ✅ |
 | 16 | | **Revision Day** — Phase 2 | | | | | 🔲 |
 | 17 | | Hashing — HashMap Fundamentals | | | | | 🔲 |
 | 18 | | Hashing — HashSet & Frequency Counting | | | | | 🔲 |
